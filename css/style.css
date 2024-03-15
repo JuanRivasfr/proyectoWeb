@@ -11,6 +11,7 @@
 
 body{
     width: 100vw;
+    background-color: var(--color-terciary);
 }
 
 header{
@@ -60,14 +61,68 @@ header{
 main{
     width: 100%;
     margin-top: 7.2vh;
-    border: 1px solid salmon;
 }
 
 .home{
     width: 100%;
     height: 600px;
-    border: 1px solid black;
+    border: 1px solid white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+    grid-template-areas: 
+    "homefull homeimg"
+    ;
+}
+
+.home__full{
+    width: 100%;
+    height: 100%;
+    grid-area: homefull;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & .home__full__cont{
+        margin-right: 8vw;
+
+        & h1{
+            font-size: 5vw;
+            font-weight: 300;
+            text-transform: capitalize;
+            color: var(--color-primary);
+        }
+
+        & p{
+            color: var(--color-secundary);
+            white-space: pre-line;
+            font-size: 1.7vw;
+            padding-bottom:1.4vw;
+        }
+
+        & button{
+            background-color: var(--color-primary);
+            color: var(--color-secundary);
+            font-size: 1.2vw;
+            padding: .5vw;
+            border: 0;
+        }
+
+    }
+
+}
+
+.home__img{
+    grid-area: homeimg;
+    display: flex;
+    align-items: center;
+    margin-left: 8vw;
+
+    & .home__img__cont{
+        width: 55%;
+    }
+
+    & img{
+        width: 100%;
+    }
 }

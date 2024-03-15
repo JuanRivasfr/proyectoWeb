@@ -60,12 +60,11 @@ header{
 
 main{
     width: 100%;
-    margin-top: 7.2vh;
 }
 
 .home{
     width: 100%;
-    height: 600px;
+    height: 100vh;
     border: 1px solid white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -88,7 +87,7 @@ main{
 
         & h1{
             font-size: 5vw;
-            font-weight: 300;
+            font-weight: 400;
             text-transform: capitalize;
             color: var(--color-primary);
         }
@@ -119,7 +118,77 @@ main{
     margin-left: 8vw;
 
     & .home__img__cont{
-        width: 55%;
+        width: 60%;
+    }
+
+    & img{
+        width: 100%;
+    }
+}
+
+.aboutus{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "usimg usabout"
+    ;
+}
+
+.us__about{
+    width: 100%;
+    height: 100%;
+    grid-area: usabout;
+    display: flex;
+    align-items: center;
+
+    & .us__about__cont{
+        margin-left: 8vw;
+
+        & .about__cont__p1{
+            color: var(--color-primary);
+            font-size: 1.5vw;
+        }
+
+        & h1{
+            color: var(--color-secundary);
+            white-space: pre-line;
+            font-weight: 400;
+            font-size: 3vw;
+        }
+        
+        & .about__cont__p2{
+            color: var(--color-secundary);
+            font-size: 1.2vw;
+            white-space: pre-line;
+            padding-bottom: 1.4vw;
+            padding-top: 1vw;
+        }
+
+        & button{
+            background-color: var(--color-primary);
+            color: var(--color-secundary);
+            font-size: 1.2vw;
+            padding: .5vw 1.5vw;
+            border: 0;
+        }
+
+    }
+
+}
+
+.us__img{
+    grid-area: usimg;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 8vw;
+
+    & .us__img__cont{
+        width: 70%;
     }
 
     & img{

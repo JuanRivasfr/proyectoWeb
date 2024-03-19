@@ -29,6 +29,13 @@ header {
     }
 }
 
+#toggle,
+header label{
+    display: none;
+    cursor: pointer;
+}
+
+
 .menu__nav {
     & ul {
         display: flex;
@@ -480,7 +487,7 @@ footer {
 
 }
 
-@media (width < 1024px) and (height > 629px) {
+@media (width < 600px) and (height > 629px) {
 
     * {
         padding: 0;
@@ -508,29 +515,46 @@ footer {
             font-size: 4vw;
             margin-left: 5vw;
         }
+
+        & label{
+            display: initial;
+            margin-right: 3vw;
+        }
+
     }
 
+
+
     .menu__nav {
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+
         & ul {
             display: flex;
             list-style: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-sextuple);
         }
 
         & a {
             text-decoration: none;
             color: var(--color-secundary);
-            font-size: 3vw;
+            font-size: 5vw;
 
         }
 
         & li {
-            margin: 1vw;
-        }
-
-        & li:last-child {
-            margin-right: 3vw;
+            margin: 2vw;
         }
     }
+
+    #toggle:checked ~ 
 
     .menu {
         position: fixed;

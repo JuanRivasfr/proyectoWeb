@@ -554,7 +554,9 @@ footer {
         }
     }
 
-    #toggle:checked ~ 
+    #toggle:checked ~ .menu__nav {
+        display: block;
+    }
 
     .menu {
         position: fixed;

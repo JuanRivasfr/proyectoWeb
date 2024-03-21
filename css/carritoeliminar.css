@@ -1,0 +1,213 @@
+@import url(variables.css);
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+
+* {
+    font-family: "Basic", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: var(--color-primary);
+    display: flex;
+}
+
+.izq {
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    & header {
+        color: var(--color-terciary);
+        font-size: 1.5vw;
+        margin-top: 4vw;
+    }
+
+    & ul {
+        list-style: none;
+    }
+
+    & li {
+        margin: .5vw 0;
+    }
+
+    & li:nth-child(5) {
+        margin-top: 10vw;
+    }
+
+    & a {
+        text-decoration: none;
+        color: var(--color-terciary);
+        font-size: 1.1vw;
+        display: flex;
+        align-items: center;
+    }
+
+    & i {
+        color: var(--color-secundary);
+        margin-right: .5vw;
+        font-size: 1.2vw;
+    }
+
+    & li:nth-child(5) i {
+        font-size: 1.4vw;
+    }
+
+    & span {
+        background-color: var(--color-secundary);
+        padding: 0 .5vw;
+        margin-left: .5vw;
+        border: 1px solid var(--color-terciary);
+        border-radius: 10px;
+    }
+
+    & footer {
+        font-size: 1.1vw;
+        width: 65%;
+        margin-bottom: 4vw;
+        color: var(--color-terciary);
+    }
+
+}
+
+.der {
+    width: 80%;
+    height: 100vh;
+    padding: 3vw;
+
+
+    & .der__cont {
+        width: 100%;
+        height: 100%;
+        background: var(--color-secundary);
+        border-radius: 40px;
+        padding: 1vw 2vw;
+    }
+
+    & h1 {
+        color: var(--color-terciary);
+        font-size: 2vw;
+        height: 10%;
+    }
+
+    & .todos__cont {
+        display: flex;
+        width: 100%;
+        height: 90%;
+        flex-direction: column;
+    }
+
+    & .der__cont__cont {
+        background-color: var(--color-aux);
+        margin: 1vw .5vw;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--color-primary);
+        height: fit-content;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        font-size: 1.5vw;
+        color: var(--color-primary);
+
+        & img {
+            width: 80px;
+            min-width: 200px;
+            height: 200px;
+        }
+
+        & p {
+            margin: 1vw 0;
+        }
+
+        & .der__cont__cont__cantidad p:nth-child(2) {
+            border: 1px solid var(--color-primary);
+            padding: .2vw;
+        }
+
+        & a i {
+            font-size: 3vw;
+            color: var(--color-primary);
+        }
+
+        & .der__cont__cont__cantidad{
+            width: 10%;
+        }
+
+        & .der__cont__cont__nombre{
+            width: 15%;
+        }
+
+    }
+
+    & .der__cont__cont__footer {
+        width: 100%;
+        margin: 1vw .5vw;
+        display: flex;
+        justify-content: space-between;
+
+        & button {
+            height: fit-content;
+        }
+
+        & a:nth-child(1) {
+            width: 15%;
+        }
+
+        & a button {
+            color: var(--color-terciary);
+            background-color: var(--color-primary);
+            border: 0;
+            width: 100%;
+            text-align: left;
+            padding: .4vw .8vw;
+            border-radius: 8px;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+        }
+
+        & .cont__footer {
+            display: flex;
+            border: 1px solid var(--color-primary);
+            background-color: var(--color-secundary);
+            color: var(--color-primary);
+            align-items: center;
+            width: 25%;
+            border-radius: 15px;
+            justify-content: space-around;
+
+            & div,
+            button {
+                margin: .5vw;
+            }
+
+            & button {
+                color: var(--color-terciary);
+                background-color: var(--color-primary);
+                border: 0;
+                width: 60%;
+                text-align: left;
+                padding: .4vw .8vw;
+                border-radius: 8px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+    }
+
+}
